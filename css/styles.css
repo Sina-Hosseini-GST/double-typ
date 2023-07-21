@@ -1,12 +1,13 @@
 body {
   flex-direction: column;
   display: flex;
-  margin: 72px auto;
   background-color: white;
+  margin: 60px auto;
 }
 @media screen and (min-width: 768px) {
   body {
     flex-direction: row;
+    margin: 72px auto;
   }
 }
 body h1 {
@@ -39,16 +40,22 @@ body article {
 body article section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 0 24px;
+  padding: 0 10px;
+  gap: 12px;
+}
+@media screen and (min-width: 768px) {
+  body article section {
+    padding: 0 24px;
+    gap: 24px;
+  }
 }
 body article section div {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 body article section div label {
-  white-space: nowrap;
+  cursor: pointer;
   font-weight: bold;
 }
 body article section div input {
@@ -56,7 +63,10 @@ body article section div input {
   height: 24px;
 }
 body article section div input[type=file] {
-  transform: translateX(-4px);
+  transform: translateY(3px);
+}
+body article section div input[type=color], body article section div input[type=file] {
+  cursor: pointer;
 }
 body article textarea {
   padding: 12px;

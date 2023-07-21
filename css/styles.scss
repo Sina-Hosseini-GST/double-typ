@@ -1,9 +1,8 @@
 $lg: 768px;
 $c: 24px;
 $c-2: 48px;
-
 body{
-  background-color: white;
+  background-color: #f7f7f7;
   padding: 60px 0;
   margin: 0;
   @media screen and (min-width: $lg){
@@ -36,34 +35,49 @@ body{
       }
       display: flex;
       flex-direction: column;
-      gap: $c;
+      gap: 12px;
+      @media screen and (min-width: $lg){
+        gap: $c;
+      }
       & > ul{
+        list-style-type: none;
         margin: 0;
         display: flex;
         flex-direction: column;
-        padding: 0 10px;
+        padding: 0 12px;
         gap: 12px;
         @media screen and (min-width: $lg){
-          padding: 0 $c;
           gap: $c;
         }
-        & > li{
+        & > li > label{
           display: flex;
           align-items: center;
-          gap: 6px;
-          & > label{
-            cursor: pointer;
+          gap: 3px;
+          padding: 6px;
+          background-color: #eeeeee;
+          border: 1px #c6c6c6 solid;
+          border-radius: 3px;
+          cursor: pointer;
+          @media screen and (min-width: $lg){
+            gap: 6px;
+            padding: 12px;
+          }
+          &:hover{
+            border: 1px #787878 solid;
+          }
+          &:focus-within{
+            border: 1px #787878 solid;
+          }
+          & > span:first-child{
             font-weight: bold;
+            white-space: nowrap;
           }
           & > input{
-            flex: 1;
+            width: 100%;
             height: $c;
           }
           & > input[type="file"]{
             transform: translateY(3px);
-          }
-          & > input[type="color"], & > input[type="file"]{
-            cursor: pointer;
           }
         }
       }
@@ -78,6 +92,16 @@ body{
         z-index: 5;
       }
     }
+    & > section:first-child > ul{
+      @media screen and (min-width: $lg){
+        padding: 0 12px 0 $c;
+      }
+    }
+    & > section:nth-child(2) > ul{
+      @media screen and (min-width: $lg){
+        padding: 0 $c 0 12px;
+      }
+    }
   }
   & > h2{
     inset: auto 0 0;
@@ -86,11 +110,11 @@ body{
     }
   }
 }
-
-#text-one{
-  border-right: 0;
+@media screen and (min-width: $lg){
+  #text-one{
+    border-right: 0;
+  }
 }
-
 h1, h2{
   margin: 0;
   position: fixed;

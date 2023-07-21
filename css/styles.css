@@ -26,63 +26,64 @@ body > main {
     flex-direction: row;
   }
 }
-body > main > article:nth-of-type(1) {
+body > main > section:nth-of-type(1) {
   flex-direction: column-reverse;
 }
 @media screen and (min-width: 768px) {
-  body > main > article:nth-of-type(1) {
+  body > main > section:nth-of-type(1) {
     flex-direction: column;
   }
 }
-body > main > article {
+body > main > section {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 @media screen and (min-width: 768px) {
-  body > main > article {
+  body > main > section {
     width: 50%;
   }
 }
-body > main > article > section {
+body > main > section > ul {
+  margin: 0;
   display: flex;
   flex-direction: column;
   padding: 0 10px;
   gap: 12px;
 }
 @media screen and (min-width: 768px) {
-  body > main > article > section {
+  body > main > section > ul {
     padding: 0 24px;
     gap: 24px;
   }
 }
-body > main > article > section > div {
+body > main > section > ul > li {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-body > main > article > section > div > label {
+body > main > section > ul > li > label {
   cursor: pointer;
   font-weight: bold;
 }
-body > main > article > section > div > input {
+body > main > section > ul > li > input {
   flex: 1;
   height: 24px;
 }
-body > main > article > section > div > input[type=file] {
+body > main > section > ul > li > input[type=file] {
   transform: translateY(3px);
 }
-body > main > article > section > div > input[type=color], body > main > article > section > div > input[type=file] {
+body > main > section > ul > li > input[type=color], body > main > section > ul > li > input[type=file] {
   cursor: pointer;
 }
-body > main > article > textarea {
+body > main > section > textarea {
   padding: 12px;
   resize: vertical;
   height: 160px;
   z-index: 5;
 }
 @media screen and (min-width: 768px) {
-  body > main > article > textarea {
+  body > main > section > textarea {
     position: sticky;
     top: 48px;
   }

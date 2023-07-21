@@ -1,89 +1,96 @@
 body {
-  flex-direction: column;
-  display: flex;
   background-color: white;
-  margin: 60px auto;
+  padding: 60px 0;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   body {
-    flex-direction: row;
-    margin: 72px auto;
+    padding: 72px 0;
   }
 }
-body h1 {
+body > h1 {
   inset: 0 0 auto;
 }
-body h1 span:first-child {
+body > h1 > span:first-child {
   text-decoration: line-through;
 }
-body h1 span:nth-child(2) {
+body > h1 > span:nth-child(2) {
   text-decoration: underline;
 }
-body article:nth-of-type(1) {
+body > main {
+  flex-direction: column;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  body > main {
+    flex-direction: row;
+  }
+}
+body > main > article:nth-of-type(1) {
   flex-direction: column-reverse;
 }
 @media screen and (min-width: 768px) {
-  body article:nth-of-type(1) {
+  body > main > article:nth-of-type(1) {
     flex-direction: column;
   }
 }
-body article {
+body > main > article {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 @media screen and (min-width: 768px) {
-  body article {
+  body > main > article {
     width: 50%;
   }
 }
-body article section {
+body > main > article > section {
   display: flex;
   flex-direction: column;
   padding: 0 10px;
   gap: 12px;
 }
 @media screen and (min-width: 768px) {
-  body article section {
+  body > main > article > section {
     padding: 0 24px;
     gap: 24px;
   }
 }
-body article section div {
+body > main > article > section > div {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-body article section div label {
+body > main > article > section > div > label {
   cursor: pointer;
   font-weight: bold;
 }
-body article section div input {
+body > main > article > section > div > input {
   flex: 1;
   height: 24px;
 }
-body article section div input[type=file] {
+body > main > article > section > div > input[type=file] {
   transform: translateY(3px);
 }
-body article section div input[type=color], body article section div input[type=file] {
+body > main > article > section > div > input[type=color], body > main > article > section > div > input[type=file] {
   cursor: pointer;
 }
-body article textarea {
+body > main > article > textarea {
   padding: 12px;
   resize: vertical;
   height: 160px;
   z-index: 5;
 }
 @media screen and (min-width: 768px) {
-  body article textarea {
+  body > main > article > textarea {
     position: sticky;
     top: 48px;
   }
 }
-body h2 {
+body > h2 {
   inset: auto 0 0;
 }
-body h2 span {
+body > h2 > span {
   text-decoration: underline;
 }
 

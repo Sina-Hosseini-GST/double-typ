@@ -60,8 +60,12 @@ textAlignOne.addEventListener('keyup', () => {
   textOne.style.textAlign= textAlignOne.value;
 });
 
-colorOne.addEventListener('keyup', () => {
-  textOne.style.color= colorOne.value;
+colorOne.addEventListener('input', (event) => {
+  textOne.style.color= event.target.value;
+});
+
+colorOne.addEventListener('change', (event) => {
+  textOne.style.color= event.target.value;
 });
 
 // section-2
@@ -101,6 +105,10 @@ textAlignTwo.addEventListener('keyup', () => {
   textTwo.style.textAlign= textAlignTwo.value;
 });
 
-colorTwo.addEventListener('keyup', () => {
-  textTwo.style.color= colorTwo.value;
+colorTwo.addEventListener('input', (event) => {
+  textTwo.style.color= event.target.value;
+});
+
+colorTwo.addEventListener('change', (event) => {
+  textTwo.style.color= event.target.value;
 });
